@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+pnpm-lock.yaml
+
+# Editor directories and files
+.vscode
+.idea
+
+/.pnpm-store/
+docker-compose.override.yml
+.env

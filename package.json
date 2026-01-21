@@ -1,0 +1,52 @@
+{
+  "name": "web-app-markdown-editor",
+  "version": "0.1.0",
+  "description": "A WYSIWYG Markdown editor for OpenCloud",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm vite build",
+    "build:w": "pnpm vite build --watch --mode development",
+    "build:s": "pnpm build && docker compose restart opencloud",
+    "env:create": "docker compose create",
+    "check:types": "vue-tsc --noEmit",
+    "lint": "eslint 'src/**/*.{js,ts,vue}' --color",
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write",
+    "test:unit": "NODE_OPTIONS=--unhandled-rejections=throw vitest"
+  },
+  "devDependencies": {
+    "@opencloud-eu/eslint-config": "^4.3.0",
+    "@opencloud-eu/prettier-config": "^4.3.0",
+    "@opencloud-eu/tsconfig": "^4.3.0",
+    "@opencloud-eu/web-client": "4.3.0",
+    "@opencloud-eu/web-pkg": "^4.3.0",
+    "eslint": "^9.39.2",
+    "happy-dom": "^20.3.1",
+    "prettier": "^3.8.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.17",
+    "vue": "^3.5.26",
+    "vue-router": "^4.6.4",
+    "vue-tsc": "^3.2.2",
+    "vue3-gettext": "^2.4.0"
+  },
+  "dependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@opencloud-eu/extension-sdk": "^4.3.0",
+    "@tiptap/core": "^3.16.0",
+    "@tiptap/extension-image": "^3.16.0",
+    "@tiptap/extension-link": "^3.16.0",
+    "@tiptap/extension-table": "^3.16.0",
+    "@tiptap/extension-task-item": "^3.16.0",
+    "@tiptap/extension-task-list": "^3.16.0",
+    "@tiptap/starter-kit": "^3.16.0",
+    "@tiptap/vue-3": "^3.16.0",
+    "floating-vue": "^5.2.2",
+    "tiptap-markdown": "^0.9.0",
+    "unplugin-icons": "^23.0.1"
+  },
+  "packageManager": "pnpm@10.28.0"
+}
